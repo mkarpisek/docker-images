@@ -1,0 +1,11 @@
+coverage
+pylint
+pylint-exit
+pylint-json2html
+nose 
+nose-exclude 
+nose-testconfig 
+nose-htmloutput
+nosexcover
+mkdocs-bootstrap4
+mkdocs
