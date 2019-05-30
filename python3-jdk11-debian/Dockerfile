@@ -24,11 +24,10 @@ ENV PATH $M2:$PATH
 RUN echo "MAVEN_VERION" && mvn -version
 
 # PYTHON LIBS
-RUN echo "PIP_VERSION" && pip --version
-
 COPY requirements.txt /requirements.txt
-RUN pip install -r /requirements.txt
+RUN pip install --upgrade pip && pip install -r /requirements.txt
 
+RUN echo "PIP_VERSION" && pip --version
 RUN echo "PIP_LIBRARIES" && pip freeze
 
 CMD ["python3"]
